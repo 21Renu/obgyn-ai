@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI-Powered OB-GYN Patient Experience Model</title>
 
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb, #e8f1ff);
+    color: #003c8f;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background: linear-gradient(90deg, #004ba0, #1976d2);
+    padding: 14px 22px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 22px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0d47a1;
+  }
+
+  h2 {
+    color: #0d47a1;
+    font-size: 26px;
+    margin-top: 35px;
+    border-left: 6px solid #64b5f6;
+    padding-left: 12px;
+    font-weight: 700;
+  }
+
+  .box {
+    background: #ffffffcc;
+    border-radius: 14px;
+    padding: 22px;
+    margin-top: 15px;
+    border: 1px solid #90caf9;
+    box-shadow: 0 6px 18px rgba(13,71,161,0.25);
+  }
+
+  .highlight {
+    font-weight: 700;
+    color: #0d47a1;
+  }
+
+  .flow-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .flow-node {
+    background: #e3f2fd;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #90caf9;
+    font-weight: 600;
+  }
+
+  .arrow {
+    font-size: 24px;
+    color: #0d47a1;
+  }
+
+  /* Emergency & Chatbot buttons */
+  #emergencyBtn, #chatbotBtn {
+    position: fixed;
+    right: 20px;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 20px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(13,71,161,0.4);
+  }
+  #emergencyBtn { bottom: 80px; background:#1565c0; }
+  #chatbotBtn { bottom: 20px; background:#0d47a1; }
+
+  #emergencyModal {
+    display: none;
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .modal-item {
+    padding: 10px;
+    background: #e3f2fd;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #64b5f6;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .modal-item:hover {
+    background:#bbdefb;
+  }
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">💙 OB-GYN AI Healthcare</div>
+</nav>
+
+<div class="container">
+
+  <h1>🤰 AI-Powered OB-GYN Patient Experience Model</h1>
+
+  <h2>🌐 Problem Statement</h2>
+  <div class="box">
+    Obstetrics and gynecology departments struggle with <span class="highlight">high patient load, long waiting times, 
+    communication gaps, and delayed care</span>, leading to anxiety and poor patient satisfaction. 
+    AI-driven workflow automation can improve triage, queue management, follow-ups, and emergency handling.
+  </div>
+
+  <h2>🩺 System Workflow</h2>
+  <div class="box">
+    The workflow ensures smooth end-to-end patient journey. Symptoms are entered digitally, analyzed by AI, and assigned a priority queue. Doctors receive structured summaries, and patients continue receiving reminders and follow-up support.
+    
+    <div class="flow-container">
+      <div class="flow-node">📝 Registration</div>
+      <div class="arrow">→</div>
+      <div class="flow-node">📲 Symptom Input</div>
+      <div class="arrow">→</div>
+      <div class="flow-node">🤖 AI Triage</div>
+      <div class="arrow">→</div>
+      <div class="flow-node">📊 Queue Assignment</div>
+      <div class="arrow">→</div>
+      <div class="flow-node">👩‍⚕️ Doctor Consultation</div>
+      <div class="arrow">→</div>
+      <div class="flow-node">📅 Follow-Up Support</div>
+    </div>
+  </div>
+
+  <h2>✨ Key Features</h2>
+  <div class="box">
+    <ul>
+      <li><span class="highlight">AI Digital Triage:</span> Automatic prioritization into emergency, urgent, routine</li>
+      <li><span class="highlight">Smart Queue Management:</span> Dynamic real-time updates</li>
+      <li><span class="highlight">AI Chatbot:</span> 24/7 support for pregnancy & gynecology queries</li>
+      <li><span class="highlight">Reminder Engine:</span> Automated alerts for scans & vaccinations</li>
+      <li><span class="highlight">Risk Alerts:</span> Bleeding, cramps, hypertension</li>
+      <li><span class="highlight">Doctor Dashboard:</span> Structured summaries for faster decisions</li>
+    </ul>
+  </div>
+
+  <h2>💻 Technology Stack</h2>
+  <div class="box">
+    <ul>
+      <li><span class="highlight">Frontend:</span> React / Flutter</li>
+      <li><span class="highlight">Backend:</span> FastAPI / Node.js (Microservices)</li>
+      <li><span class="highlight">Database:</span> PostgreSQL / Firebase</li>
+      <li><span class="highlight">AI Models:</span> NLP symptom analysis, risk classifier</li>
+      <li><span class="highlight">Integrations:</span> SMS Gateway, EMR/HMIS APIs</li>
+    </ul>
+  </div>
+
+  <h2>🚀 Future Scope</h2>
+  <div class="box">
+    <ul>
+      <li>Wearable maternal monitoring</li>
+      <li>Auto-documentation to EMR</li>
+      <li>Predictive complication detection</li>
+      <li>Teleconsultation for remote patients</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<!-- EMERGENCY BUTTON -->
+<button id="emergencyBtn">🚨 Emergency</button>
+<div id="emergencyModal">
+  <div class="modal-item" onclick="callAmbulance()">🚑 Ambulance - 108</div>
+  <div class="modal-item" onclick="callGuardian()">👨‍👩‍👧 Call Guardian</div>
+</div>
+
+<!-- CHATBOT BUTTON -->
+<button id="chatbotBtn" onclick="chatBot()">💬 Chatbot</button>
+
+<script>
+  const modal = document.getElementById("emergencyModal");
+  document.getElementById("emergencyBtn").onclick = () =>
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+
+  function callAmbulance() { window.location.href = "tel:108"; }
+  function callGuardian() {
+    const name = prompt("Enter Guardian Name:");
+    const phone = prompt("Enter Guardian Number:");
+    if(phone) window.location.href = `tel:${phone}`;
+  }
+
+  function chatBot() {
+    const q = prompt("Hello! How can I help you today?");
+    if(q) alert("AI Response: Thank you! A care assistant will support you shortly. 💙");
+  }
+</script>
+
+</body>
+</html>
